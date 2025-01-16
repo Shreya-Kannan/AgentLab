@@ -223,7 +223,7 @@ clicking the refresh button.
     The update mechanism is somewhat flacky, please help figure out why (or is it just gradio?).
     """
                     )
-                agent_table = gr.DataFrame(max_height=500, show_label=False, interactive=False)
+                agent_table = gr.DataFrame(max_height=500, show_label=False, interactive=False, elem_id="agent_table")
             with gr.Tab("Select Task and Seed", id="Select Task"):
                 with gr.Row():
                     with gr.Column(scale=4):
@@ -297,7 +297,7 @@ clicking the refresh button.
             state_error = gr.Markdown(label="Next Step Error", elem_classes="my-markdown")
 
         profiling_gr = gr.Image(
-            label="Profiling", show_label=False, interactive=False, show_download_button=False
+            label="Profiling", show_label=False, interactive=False, show_download_button=False,  elem_id="profiling_img"
         )
 
         gr.HTML(
